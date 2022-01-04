@@ -89,7 +89,8 @@ if (isset($_GET['error'])) {
   span {
     color: red;
     display: block;
-    margin-left: 20px;
+    margin-left: 10px;
+    font-weight: 700;
   }
 </style>
 
@@ -101,10 +102,10 @@ if (isset($_GET['error'])) {
       <input class="reg" type="text" name="reg_no" id="reg_no" placeholder="Enter your reg no"></input><br>
       <span></span>
       <label for="id"><b>Student ID</b></label>
-      <input type="number" class="form-control" name="ID" placeholder="Enter new STUDENT ID" required>
+      <input type="number" class="form-control" name="ID" id="ID" placeholder="Enter new STUDENT ID" required>
       <span></span>
       <label for="name"><b>Password</b></label>
-      <input type="password" class="form-control" name="password" placeholder="Enter your new password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="at least one number and one uppercase and lowercase letter, and at least 8 or more characters">
+      <input type="password" class="form-control" name="password" id="password" placeholder="Enter your new password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="at least one number and one uppercase and lowercase letter, and at least 8 or more characters">
       <span></span>
       <button type="submit">Register</button>
       <button onclick="goBack()">Go Back</button>
@@ -114,22 +115,44 @@ if (isset($_GET['error'])) {
           window.location.href = 'index.php?sucess';
         }
 
-          let reg_no = document.getElementById('reg_no');
-          let span = document.getElementsByTagName('span');
+        let reg_no = document.getElementById('reg_no');
+        let password = document.getElementById('password');
+        let ID = document.getElementById('ID');
+        let span = document.getElementsByTagName('span');
 
-          reg_no.onkeyup= function() {
-            const regex = /^ACME[0-9]{4}$/;
-          
-            if (regex.test(reg_no.value)) {
-              span[0].innerText = "Your reg number is valid";
-              span[0].style.color = 'Red';
+        reg_no.onkeyup = function() {
+          const regex = /^ACME[0-9]{4}$/;
+          if (regex.test(reg_no.value)) {
+            span[0].innerText = "Your reg number is valid";
+            span[0].style.color = 'Green';
 
-            }
-             else {
-              span[0].innerText = "Your reg number is invalid";
-              span[0].style.color = 'Blue';
-            }
+          } else {
+            span[0].innerText = "**Your reg number is invalid";
+            span[0].style.color = 'Red';
           }
+        }
+        password.onkeyup = function() {
+          const regexo = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/;
+          if (regexo.test(password.value)) {
+            span[2].innerText = "Your password is valid";
+            span[2].style.color = 'Green';
+
+          } else {
+            span[2].innerText = "**Your password is invalid";
+            span[2].style.color = 'Red';
+          }
+        }
+        ID.onkeyup = function() {
+          const regexoo = /^[0-9]{8}$/;
+          if (regexoo.test(ID.value)) {
+            span[1].innerText = "Your student id is valid";
+            span[1].style.color = 'Green';
+
+          } else {
+            span[1].innerText = "**Your student id is invalid";
+            span[1].style.color = 'Red';
+          }
+        }
       </script>
     </div>
   </form>
