@@ -51,5 +51,8 @@
 				</div>
 
 			</div>
-
+<style>
+	.footer-distributed{
+		margin-top:420px;
+	}
 		</footer>
