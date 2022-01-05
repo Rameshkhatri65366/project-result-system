@@ -40,7 +40,7 @@
     </div>
     <style>
       .container {
-        margin-top: 15px;
+        margin-top: 1px;
 
       }
 
@@ -50,19 +50,27 @@
         color: white;
         padding: 8px;
         position: relative;
-        margin-top: 5px;
-        right: 45%;
+        margin-top: 10px;
+        right: 46%;
       }
 
       ;
     </style>
+    
     <div class="top_part_container">
-      <div class="slideshow-container" style="width:600px;height:900px;background-color:#dee2e6"></div> 
-
+      <div class="slideshow-container" style="width:600px;height:550px;">
+      <img src="1-1_1609510797.png" style="width:600px;height:500px"></div> 
+      <style>
+      .top_part_container{
+margin-top: 20px;
+margin-left:5px;
+position:relative;
+</style>
 
       </div>
+    
       <!--start of Notice-->
-      <div class="notice_container" style="width:700px;height:600px;background-color:#dee2e6">
+      <div class="notice_container" style="width:700px;height:500px;background-color: #1f2833;">
         <a href="notice.php">
           <h2> Click to view latest notice..</h2>
         </a>
@@ -135,10 +143,54 @@ margin-top: 35px;
         }
 
         .notice_container{
-margin-top: 180px;
+margin-top: 160px;
 
         }
-      </style>
+      </style></div>
+  <div class="message_container">
+      <div class="slideshow-container;" ></div> 
+      <h3>Message from Principal</h3>
+      <p>
+               Being the first engineering college affiliated to Purbanchal University, Acme Engineering College has been recognized as one of the best 10 engineering colleges within Nepal. The objective of this college is to produce not only the technically sound but also an ethical Engineers and Architects who has feelings of responsibility towards their assigned duty.
+
+These facts are proven by our graduates who are currently working within the country or abroad. Our products are not only getting admission for Masters course in the foreign countries but also some have got direct admission for M.Sc. course leading to Ph.D.
+
+Students find real academic environment and the place to groom themselves as complete engineer/architect. Apart from regular courses, there are guest lecture from the experts in various fields and ample visits in the relevant field to observe the real application of engineering/ Architectural knowledge.
+
+There are several clubs within the college, related to their discipline, where the enthusiastic students come together and conduct various activities to enhance their knowledge and exposure. We believe in the self-exploration and creation. Acme is Acme in real sense. Verify with our graduates and current students. We always welcome those students, who really want to become a competent and complete Engineer/Architect.
+      </p>
+    <!--End of message container-->
+    </div>
+<style>
+  .message_container{
+  display: block;
+  position: absolute;
+  background-color:#557A95;
+  border-radius: 2%;
+  margin: 2%;
+  padding:2%;
+  overflow: hidden;
+
+}
+
+.message_container:hover{
+  background-color:#557A95;
+  color: black;
+}
+
+.message_container h3{
+  text-align:left;
+  font-size: 1em;
+  margin: 2px;
+}
+
+.message_container{
+margin-top: 120px;
+
+}
+</style>
+      </div>
+      
 </body>
 </main>
 <footer>
